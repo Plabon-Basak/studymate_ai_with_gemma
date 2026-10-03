@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyMate AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">StudyMate AI</h1>
+            <p class="subtitle">Learn anything, explained your way.</p>
+            <p class="description">Generate personalized study material with AI in seconds.</p>
+        </header>
+
+        <main>
+            <section class="input-section" aria-label="Input form">
+                <div class="form-group">
+                    <label for="topic" class="form-label">Topic</label>
+                    <input type="text" id="topic" class="form-input" placeholder="Enter a topic, e.g. Python Lists" autocomplete="off">
+                    <p id="topicError" class="error-message" aria-live="polite"></p>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="language" class="form-label">Language</label>
+                        <select id="language" class="form-select">
+                            <option value="English">English</option>
+                            <option value="Bangla">Bangla</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="difficulty" class="form-label">Difficulty</label>
+                        <select id="difficulty" class="form-select">
+                            <option value="Beginner">Beginner</option>
+                            <option value="Intermediate">Intermediate</option>
+                            <option value="Advanced">Advanced</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button id="generateBtn" class="generate-btn" type="button">
+                    Generate Study Material
+                </button>
+            </section>
+
+            <section class="loading-section" id="loadingSection" aria-live="polite" style="display: none;">
+                <div class="loader"></div>
+                <p class="loading-text">Generating your study material...</p>
+            </section>
+
+            <section class="result-section" id="resultSection" style="display: none;" aria-live="polite">
+                <div class="result-header">
+                    <h2 class="result-title">Generated Study Material</h2>
+                    <button id="copyBtn" class="copy-btn" type="button">Copy Study Material</button>
+                </div>
+                <div class="result-content" id="resultContent" tabindex="0"></div>
+            </section>
+
+            <section class="error-section" id="errorSection" style="display: none;" aria-live="polite">
+                <p class="error-text" id="errorText"></p>
+            </section>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
