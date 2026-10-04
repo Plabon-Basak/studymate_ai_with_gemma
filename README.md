@@ -1,5 +1,15 @@
 # StudyMate AI
 
+> An AI-powered study assistant designed to help students learn, understand, and study more effectively.
+
+## 🏆 Hackathon Winner — Best Use of Gemma
+
+**Winner of the Best Use of Gemma prize at Hacktoberfest Hack Day Dinajpur 2026.**
+
+StudyMate AI was recognized for its effective use of Google's **Gemma** model in building an AI-powered study assistant.
+
+---
+
 ## Description
 
 StudyMate AI is a simple, polished, AI-powered study assistant that turns any topic into personalized study material using Google's Gemma models via Google AI Studio API. It generates structured explanations, examples, Python code when relevant, key points, and a quiz with answers — all tailored to your chosen language (English or Bangla) and difficulty level (Beginner, Intermediate, Advanced).
